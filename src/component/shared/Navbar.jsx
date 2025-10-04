@@ -29,10 +29,10 @@ const Navbar = () => {
 
             <div className="hidden md:flex items-center space-x-8">
               <Link
-                href="#properties"
+                href="/"
                 className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300"
               >
-                Properties
+                Home
               </Link>
               <Link
                 href="#services"
@@ -41,7 +41,7 @@ const Navbar = () => {
                 Services
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300"
               >
                 About

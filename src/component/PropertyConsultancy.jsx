@@ -9,50 +9,65 @@ const PropertyConsultancy = () => {
       icon: '📊',
       title: 'Market Analysis',
       description: 'Comprehensive market research and competitive analysis',
-      features: ['Demand forecasting', 'Competitor analysis', 'Pricing strategies', 'Market trends']
+      features: [
+        'Demand forecasting',
+        'Competitor analysis',
+        'Pricing strategies',
+        'Market trends',
+      ],
     },
     {
       icon: '💡',
       title: 'Investment Strategy',
       description: 'Data-driven investment recommendations and portfolio optimization',
-      features: ['ROI analysis', 'Risk assessment', 'Portfolio diversification', 'Exit strategies']
+      features: ['ROI analysis', 'Risk assessment', 'Portfolio diversification', 'Exit strategies'],
     },
     {
       icon: '🚀',
       title: 'Revenue Optimization',
-      description: 'Maximize your property\'s earning potential across all platforms',
-      features: ['Multi-platform listing', 'Dynamic pricing', 'Occupancy optimization', 'Revenue forecasting']
+      description: "Maximize your property's earning potential across all platforms",
+      features: [
+        'Multi-platform listing',
+        'Dynamic pricing',
+        'Occupancy optimization',
+        'Revenue forecasting',
+      ],
     },
     {
       icon: '🛡️',
       title: 'Risk Management',
       description: 'Protect your investments with comprehensive risk assessment',
-      features: ['Legal compliance', 'Insurance optimization', 'Market volatility', 'Contingency planning']
-    }
+      features: [
+        'Legal compliance',
+        'Insurance optimization',
+        'Market volatility',
+        'Contingency planning',
+      ],
+    },
   ];
 
   const caseStudies = [
     {
       metric: '45%',
       description: 'Revenue increase for downtown apartment complex',
-      duration: '6 months'
+      duration: '6 months',
     },
     {
       metric: '92%',
       description: 'Occupancy rate achieved for luxury villa portfolio',
-      duration: '1 year'
+      duration: '1 year',
     },
     {
       metric: '3.2x',
       description: 'ROI improvement for commercial property investment',
-      duration: '2 years'
-    }
+      duration: '2 years',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-lg border-b border-green-200 sticky top-0 z-50">
+      {/* <nav className="bg-white/80 backdrop-blur-lg border-b border-green-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 group">
@@ -66,7 +81,7 @@ const PropertyConsultancy = () => {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -79,17 +94,17 @@ const PropertyConsultancy = () => {
                 </div>
                 <span className="text-gray-700 font-semibold">Property Consultancy</span>
               </div>
-              
+
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 Unlock Your
                 <span className="block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">
                   Property's Potential
                 </span>
               </h1>
-              
+
               <p className="text-xl text-gray-600 leading-relaxed">
-                Our consultancy team helps you unlock the full earning potential of your property. 
-                From revenue management strategies to multi-platform optimization, we ensure your 
+                Our consultancy team helps you unlock the full earning potential of your property.
+                From revenue management strategies to multi-platform optimization, we ensure your
                 property stands out in a competitive market.
               </p>
 
@@ -107,7 +122,10 @@ const PropertyConsultancy = () => {
               <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                 <div className="space-y-6">
                   {caseStudies.map((study, index) => (
-                    <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200">
+                    <div
+                      key={index}
+                      className="flex items-center space-x-4 p-4 bg-gradient-to-r from-green-50 to-teal-50 rounded-xl border border-green-200"
+                    >
                       <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center">
                         <span className="text-white text-xl font-bold">{study.metric}</span>
                       </div>
@@ -130,7 +148,8 @@ const PropertyConsultancy = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Expert Consultancy Services</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions to maximize your property investments and ensure long-term success
+            Comprehensive solutions to maximize your property investments and ensure long-term
+            success
           </p>
         </div>
 
@@ -169,8 +188,8 @@ const PropertyConsultancy = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Data-Driven Approach</h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We combine market intelligence with cutting-edge technology to deliver 
-                actionable insights that drive real results for your property investments.
+                We combine market intelligence with cutting-edge technology to deliver actionable
+                insights that drive real results for your property investments.
               </p>
               <div className="space-y-4">
                 {[
@@ -178,7 +197,7 @@ const PropertyConsultancy = () => {
                   'AI-powered predictive modeling',
                   'Competitive benchmarking',
                   'Customized strategy development',
-                  'Continuous performance monitoring'
+                  'Continuous performance monitoring',
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -196,9 +215,12 @@ const PropertyConsultancy = () => {
                   { stat: '15+', label: 'Years Industry Experience' },
                   { stat: '500+', label: 'Properties Optimized' },
                   { stat: '98%', label: 'Client Satisfaction Rate' },
-                  { stat: '45%', label: 'Average Revenue Increase' }
+                  { stat: '45%', label: 'Average Revenue Increase' },
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center justify-between py-3 border-b border-green-400/30 last:border-b-0">
+                  <div
+                    key={index}
+                    className="flex items-center justify-between py-3 border-b border-green-400/30 last:border-b-0"
+                  >
                     <span className="text-green-100">{item.label}</span>
                     <span className="text-2xl font-bold">{item.stat}</span>
                   </div>
@@ -214,7 +236,8 @@ const PropertyConsultancy = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Maximize Your Returns?</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Let our experts analyze your property and create a customized strategy for maximum profitability.
+            Let our experts analyze your property and create a customized strategy for maximum
+            profitability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-green-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">

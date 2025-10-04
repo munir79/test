@@ -14,34 +14,34 @@ const PropertyManagement = () => {
         {
           icon: '📸',
           title: 'Professional Photography',
-          description: 'High-quality photos that showcase your property\'s best features'
+          description: "High-quality photos that showcase your property's best features",
         },
         {
           icon: '💬',
           title: '24/7 Guest Communication',
-          description: 'Instant response to guest inquiries and support requests'
+          description: 'Instant response to guest inquiries and support requests',
         },
         {
           icon: '💰',
           title: 'Dynamic Pricing',
-          description: 'AI-powered pricing optimization for maximum occupancy and revenue'
+          description: 'AI-powered pricing optimization for maximum occupancy and revenue',
         },
         {
           icon: '🧹',
           title: 'Cleaning Coordination',
-          description: 'Professional cleaning services between every guest stay'
+          description: 'Professional cleaning services between every guest stay',
         },
         {
           icon: '📊',
           title: 'Performance Analytics',
-          description: 'Detailed reports on occupancy rates and revenue performance'
+          description: 'Detailed reports on occupancy rates and revenue performance',
         },
         {
           icon: '🛡️',
           title: 'Damage Protection',
-          description: 'Comprehensive insurance and security deposit management'
-        }
-      ]
+          description: 'Comprehensive insurance and security deposit management',
+        },
+      ],
     },
     'long-term': {
       title: 'Long-Term Rentals',
@@ -50,41 +50,41 @@ const PropertyManagement = () => {
         {
           icon: '🔍',
           title: 'Tenant Screening',
-          description: 'Comprehensive background and credit checks for reliable tenants'
+          description: 'Comprehensive background and credit checks for reliable tenants',
         },
         {
           icon: '📝',
           title: 'Lease Management',
-          description: 'Professional lease agreements and legal documentation'
+          description: 'Professional lease agreements and legal documentation',
         },
         {
           icon: '💳',
           title: 'Rent Collection',
-          description: 'Automated rent collection with multiple payment options'
+          description: 'Automated rent collection with multiple payment options',
         },
         {
           icon: '⚡',
           title: 'Maintenance Coordination',
-          description: '24/7 emergency repair services and scheduled maintenance'
+          description: '24/7 emergency repair services and scheduled maintenance',
         },
         {
           icon: '📈',
           title: 'Rent Optimization',
-          description: 'Market analysis to ensure competitive rental pricing'
+          description: 'Market analysis to ensure competitive rental pricing',
         },
         {
           icon: '⚖️',
           title: 'Legal Compliance',
-          description: 'Stay updated with local rental laws and regulations'
-        }
-      ]
-    }
+          description: 'Stay updated with local rental laws and regulations',
+        },
+      ],
+    },
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-lg border-b border-blue-200 sticky top-0 z-50">
+      {/* <nav className="bg-white/80 backdrop-blur-lg border-b border-blue-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 group">
@@ -98,7 +98,7 @@ const PropertyManagement = () => {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -111,17 +111,18 @@ const PropertyManagement = () => {
                 </div>
                 <span className="text-gray-700 font-semibold">Property Management</span>
               </div>
-              
+
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 Stress-Free
                 <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   Property Ownership
                 </span>
               </h1>
-              
+
               <p className="text-xl text-gray-600 leading-relaxed">
-                Enjoy the benefits of property ownership without the daily hassles. We handle everything from 
-                guest communication to revenue optimization while you earn passive income.
+                Enjoy the benefits of property ownership without the daily hassles. We handle
+                everything from guest communication to revenue optimization while you earn passive
+                income.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -185,12 +186,8 @@ const PropertyManagement = () => {
       {/* Features Grid */}
       <div className="max-w-7xl mx-auto px-4 pb-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            {features[activeTab].title}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {features[activeTab].subtitle}
-          </p>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">{features[activeTab].title}</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">{features[activeTab].subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -214,7 +211,8 @@ const PropertyManagement = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of property owners who are already enjoying stress-free property management and increased revenue.
+            Join hundreds of property owners who are already enjoying stress-free property
+            management and increased revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
