@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 // Animation variants
-// this ios added
-// dfv
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
@@ -163,11 +161,125 @@ const Homepage = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-20 pb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Text Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-8 lg:pt-20 pb-16 lg:pb-32">
+          {/* Mobile: Image Grid First */}
+          <div className="block max-lg:mt-11 lg:hidden mb-8">
             <motion.div
-              className="space-y-8"
+              className="relative"
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer}
+            >
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <motion.div
+                    className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 aspect-square flex items-center justify-center hover:bg-white/15 transition-all duration-500 group overflow-hidden"
+                    variants={slideInFromLeft}
+                    whileHover={{ scale: 1.02, rotate: -1 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    <div className="w-full h-32 relative rounded-xl shadow-2xl overflow-hidden">
+                      <Image
+                        src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400&q=80"
+                        alt="Luxury Apartment"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 400px) 100vw, 400px"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+                  </motion.div>
+                  <motion.div
+                    className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 aspect-square flex items-center justify-center hover:bg-white/15 transition-all duration-500 group overflow-hidden"
+                    variants={slideInFromLeft}
+                    whileHover={{ scale: 1.02, rotate: 1 }}
+                    transition={{ type: 'spring', stiffness: 300, delay: 0.1 }}
+                  >
+                    <div className="w-full h-32 relative rounded-xl shadow-2xl overflow-hidden">
+                      <Image
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+                        alt="Modern Interior"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 400px) 100vw, 400px"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+                  </motion.div>
+                </div>
+                <div className="space-y-4 mt-8">
+                  <motion.div
+                    className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 aspect-square flex items-center justify-center hover:bg-white/15 transition-all duration-500 group overflow-hidden"
+                    variants={slideInFromRight}
+                    whileHover={{ scale: 1.02, rotate: 1 }}
+                    transition={{ type: 'spring', stiffness: 300, delay: 0.2 }}
+                  >
+                    <div className="w-full h-32 relative rounded-xl shadow-2xl overflow-hidden">
+                      <Image
+                        src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=400&q=80"
+                        alt="Family House"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 400px) 100vw, 400px"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+                  </motion.div>
+                  <motion.div
+                    className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 aspect-square flex items-center justify-center hover:bg-white/15 transition-all duration-500 group overflow-hidden"
+                    variants={slideInFromRight}
+                    whileHover={{ scale: 1.02, rotate: -1 }}
+                    transition={{ type: 'spring', stiffness: 300, delay: 0.3 }}
+                  >
+                    <div className="w-full h-32 relative rounded-xl shadow-2xl overflow-hidden">
+                      <Image
+                        src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
+                        alt="Luxury Villa Interior"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 400px) 100vw, 400px"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Mobile Floating Badge */}
+              <motion.div
+                className="absolute -bottom-2 -right-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl"
+                variants={scaleIn}
+                whileHover={{ scale: 1.1, rotate: 0 }}
+                animate={{ rotate: [0, 5, 0, -5, 0] }}
+                transition={{
+                  rotate: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
+                  scale: { type: 'spring', stiffness: 300 },
+                }}
+              >
+                <div className="text-center">
+                  <motion.div
+                    className="text-xl font-black text-white mb-1"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 100,
+                      damping: 10,
+                      delay: 1.5,
+                    }}
+                  >
+                    15+
+                  </motion.div>
+                  <div className="text-xs text-gray-300">Years Experience</div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Text Content - Comes after image on mobile */}
+            <motion.div
+              className="space-y-6 lg:space-y-8 order-2 lg:order-1"
               initial="initial"
               animate="animate"
               variants={staggerContainer}
@@ -175,7 +287,7 @@ const Homepage = () => {
               <div className="space-y-4 sm:space-y-6">
                 {/* Badge/Tagline */}
                 <motion.div
-                  className="inline-block mt-2 sm:mt-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm tracking-wider shadow-2xl"
+                  className="inline-block mt-2 bg-white/10 backdrop-blur-lg border border-white/20 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm tracking-wider shadow-2xl"
                   variants={fadeInUp}
                 >
                   PREMIUM PROPERTY SOLUTIONS
@@ -183,13 +295,13 @@ const Homepage = () => {
 
                 {/* Main Heading */}
                 <motion.h1
-                  className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[78px] font-black leading-tight sm:leading-none tracking-tight"
+                  className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[78px] font-black leading-tight sm:leading-none tracking-tight"
                   variants={fadeInUp}
                 >
                   <span className="block bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                     APARTMENTS
                   </span>
-                  <span className="block text-gray-500 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1 sm:mt-2">
+                  <span className="block text-gray-500 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl mt-1 sm:mt-2">
                     AND
                   </span>
                   <span className="block bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mt-1 sm:mt-2">
@@ -200,12 +312,12 @@ const Homepage = () => {
 
               {/* Glass Description Card */}
               <motion.div
-                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500"
+                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-2xl transform hover:scale-105 transition-all duration-500"
                 variants={fadeInUp}
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                <p className="text-xl text-gray-300 leading-relaxed">
+                <p className="text-base lg:text-xl text-gray-300 leading-relaxed">
                   <strong>Property Owners:</strong> Earn more with our full-service property
                   management.
                   <strong> Travelers:</strong> Experience comfort and style in our curated spaces.
@@ -215,9 +327,12 @@ const Homepage = () => {
               </motion.div>
 
               {/* CTA Buttons */}
-              <motion.div className="flex flex-col sm:flex-row gap-4 pt-8" variants={fadeInUp}>
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 pt-6 lg:pt-8"
+                variants={fadeInUp}
+              >
                 <motion.button
-                  className="group relative bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl overflow-hidden"
+                  className="group relative bg-white text-black px-6 lg:px-8 py-3 lg:py-4 rounded-xl lg:rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl overflow-hidden text-sm lg:text-base"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -225,7 +340,7 @@ const Homepage = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-white to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.button>
                 <motion.button
-                  className="group relative border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300 overflow-hidden"
+                  className="group relative border-2 border-white text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl lg:rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300 overflow-hidden text-sm lg:text-base"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -235,7 +350,10 @@ const Homepage = () => {
               </motion.div>
 
               {/* Stats Row */}
-              <motion.div className="flex items-center gap-8 pt-8" variants={fadeInUp}>
+              <motion.div
+                className="flex items-center justify-between lg:justify-start lg:gap-8 pt-6 lg:pt-8"
+                variants={fadeInUp}
+              >
                 {stats.slice(0, 3).map((stat, index) => (
                   <motion.div
                     key={index}
@@ -244,7 +362,7 @@ const Homepage = () => {
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <motion.div
-                      className="text-2xl font-black text-white mb-1"
+                      className="text-xl lg:text-2xl font-black text-white mb-1"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{
@@ -264,9 +382,9 @@ const Homepage = () => {
               </motion.div>
             </motion.div>
 
-            {/* Image Grid */}
+            {/* Image Grid - Hidden on mobile (shown above) */}
             <motion.div
-              className="relative"
+              className="relative hidden lg:block order-1 lg:order-2"
               initial="initial"
               animate="animate"
               variants={staggerContainer}
@@ -399,14 +517,14 @@ const Homepage = () => {
 
       {/* Stats Section */}
       <motion.div
-        className="py-20 bg-white border-t border-gray-200"
+        className="py-16 lg:py-20 bg-white border-t border-gray-200"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         viewport={{ once: true }}
       >
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -422,7 +540,7 @@ const Homepage = () => {
                 viewport={{ once: true }}
               >
                 <motion.div
-                  className="text-4xl md:text-5xl font-black text-gray-900 mb-2"
+                  className="text-3xl lg:text-4xl md:text-5xl font-black text-gray-900 mb-2"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{
@@ -435,7 +553,7 @@ const Homepage = () => {
                 >
                   {stat.number}
                 </motion.div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 font-medium text-sm lg:text-base">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -445,7 +563,7 @@ const Homepage = () => {
       {/* Services Section */}
       <motion.div
         id="services"
-        className="py-20 bg-white"
+        className="py-16 lg:py-20 bg-white"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -453,22 +571,24 @@ const Homepage = () => {
       >
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 lg:mb-16"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive property solutions tailored to your needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group border border-gray-200"
+                className="bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group border border-gray-200"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -476,7 +596,7 @@ const Homepage = () => {
                 viewport={{ once: true }}
               >
                 {/* Service Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 lg:h-48 overflow-hidden">
                   <div className="w-full h-full relative">
                     <Image
                       src={service.serviceImage}
@@ -492,11 +612,15 @@ const Homepage = () => {
                 </div>
 
                 {/* Service Content */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-black text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <div className="p-5 lg:p-6">
+                  <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-3 lg:mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base">
+                    {service.description}
+                  </p>
 
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2 lg:space-y-3 mb-4 lg:mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <motion.li
                         key={featureIndex}
@@ -507,14 +631,14 @@ const Homepage = () => {
                         viewport={{ once: true }}
                       >
                         <span className="w-2 h-2 bg-gray-400 rounded-full mr-3 flex-shrink-0"></span>
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-xs lg:text-sm">{feature}</span>
                       </motion.li>
                     ))}
                   </ul>
 
                   <Link
                     href={`/${service.link}`}
-                    className="inline-flex items-center font-bold text-gray-900 hover:text-black transition-colors duration-300 group-hover:translate-x-2 transition-transform duration-300 border-b-2 border-transparent hover:border-black pb-1"
+                    className="inline-flex items-center font-bold text-gray-900 hover:text-black transition-colors duration-300 group-hover:translate-x-2 transition-transform duration-300 border-b-2 border-transparent hover:border-black pb-1 text-sm lg:text-base"
                   >
                     See Details →
                   </Link>
@@ -528,7 +652,7 @@ const Homepage = () => {
       {/* Properties Showcase */}
       <motion.div
         id="properties"
-        className="py-20 bg-gray-50"
+        className="py-16 lg:py-20 bg-gray-50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -536,24 +660,24 @@ const Homepage = () => {
       >
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 lg:mb-16"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl md:text-5xl font-black text-gray-900 mb-4">
               Featured Properties
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
               Discover our curated selection of premium apartments and houses
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {properties.map((property, index) => (
               <motion.div
                 key={property.id}
-                className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                className="bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -561,7 +685,7 @@ const Homepage = () => {
                 viewport={{ once: true }}
               >
                 <div className="relative overflow-hidden">
-                  <div className="w-full h-64 relative">
+                  <div className="w-full h-48 lg:h-64 relative">
                     <Image
                       src={property.image}
                       alt={property.title}
@@ -574,9 +698,11 @@ const Homepage = () => {
                     {property.type}
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-black text-gray-900 mb-2">{property.title}</h3>
-                  <p className="text-gray-600 mb-4">{property.description}</p>
+                <div className="p-5 lg:p-6">
+                  <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-2">
+                    {property.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm lg:text-base">{property.description}</p>
                 </div>
               </motion.div>
             ))}
