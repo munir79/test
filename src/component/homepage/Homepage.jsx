@@ -163,7 +163,7 @@ const Homepage = () => {
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 pt-8 lg:pt-20 pb-16 lg:pb-32">
           {/* Mobile: Image Grid First */}
-          <div className="block max-lg:mt-11 lg:hidden mb-8">
+          <div className="block max-lg:mt-16 lg:hidden mb-8">
             <motion.div
               className="relative"
               initial="initial"
