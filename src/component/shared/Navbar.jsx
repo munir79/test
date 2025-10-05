@@ -38,6 +38,7 @@ const Navbar = () => {
     { name: 'Contact', type: 'link', path: '/contact-support' },
   ];
 
+  // added
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
