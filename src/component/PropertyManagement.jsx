@@ -83,22 +83,7 @@ const PropertyManagement = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Navigation */}
-      {/* <nav className="bg-white/80 backdrop-blur-lg border-b border-blue-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-800">PrimeProperties</span>
-            </Link>
-            <Link href="/#services" className="text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-300">
-              ← Back to Services
-            </Link>
-          </div>
-        </div>
-      </nav> */}
+    
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">

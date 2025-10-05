@@ -1,7 +1,8 @@
-// pages/about.js
+
 'use client';
+
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const About = () => {
   const [activeFounder, setActiveFounder] = useState(0);
@@ -15,7 +16,7 @@ const About = () => {
       bio: 'Visionary entrepreneur with a passion for creating exceptional hospitality experiences. Aima brings creative direction and strategic growth to NN Retreats.',
       traits: ['Creative Vision', 'Strategic Planning', 'Brand Development'],
       quote:
-        "We're not just managing properties; we're creating memories and building communities.",
+        'We are not just managing properties; we are creating memories and building communities.',
     },
     {
       name: 'Hezreen',
@@ -72,8 +73,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
-      {/* Navigation */}
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20">
@@ -108,47 +107,51 @@ const About = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <img
-                      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80"
-                      alt="Luxury Property"
-                      className="w-full h-32 object-cover rounded-xl mb-4"
-                    />
-                    <h3 className="font-semibold text-gray-800">Luxury Stays</h3>
-                  </div>
-                  <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-2 hover:rotate-0 transition-transform duration-500 delay-100">
-                    <img
-                      src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=400&q=80"
-                      alt="City View"
-                      className="w-full h-32 object-cover rounded-xl mb-4"
-                    />
-                    <h3 className="font-semibold text-gray-800">City Centers</h3>
-                  </div>
+            <div className="relative grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                  <Image
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80"
+                    alt="Luxury Property"
+                    width={400}
+                    height={128}
+                    className="w-full h-32 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="font-semibold text-gray-800">Luxury Stays</h3>
                 </div>
-                <div className="space-y-4 mt-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500 delay-200">
-                    <img
-                      src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=400&q=80"
-                      alt="Modern Interior"
-                      className="w-full h-32 object-cover rounded-xl mb-4"
-                    />
-                    <h3 className="font-semibold text-gray-800">Modern Design</h3>
-                  </div>
-                  <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-2 hover:rotate-0 transition-transform duration-500 delay-300">
-                    <img
-                      src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=400&q=80"
-                      alt="Hospitality"
-                      className="w-full h-32 object-cover rounded-xl mb-4"
-                    />
-                    <h3 className="font-semibold text-gray-800">Premium Service</h3>
-                  </div>
+                <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-2 hover:rotate-0 transition-transform duration-500 delay-100">
+                  <Image
+                    src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=400&q=80"
+                    alt="City View"
+                    width={400}
+                    height={128}
+                    className="w-full h-32 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="font-semibold text-gray-800">City Centers</h3>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
+              <div className="space-y-4 mt-8">
+                <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500 delay-200">
+                  <Image
+                    src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=400&q=80"
+                    alt="Modern Interior"
+                    width={400}
+                    height={128}
+                    className="w-full h-32 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="font-semibold text-gray-800">Modern Design</h3>
+                </div>
+                <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-2 hover:rotate-0 transition-transform duration-500 delay-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=400&q=80"
+                    alt="Hospitality"
+                    width={400}
+                    height={128}
+                    className="w-full h-32 object-cover rounded-xl mb-4"
+                  />
+                  <h3 className="font-semibold text-gray-800">Premium Service</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -159,7 +162,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Meet Our Gen-Z Founders</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Passionate young entrepreneurs reshaping Malaysia's hospitality landscape
+            Passionate young entrepreneurs reshaping Malaysia&apos;s hospitality landscape
           </p>
         </div>
 
@@ -185,7 +188,7 @@ const About = () => {
                     <span
                       className={activeFounder === index ? 'text-2xl' : 'text-2xl text-purple-600'}
                     >
-                      {founder.icon}
+                      👤
                     </span>
                   </div>
                   <div>
@@ -202,10 +205,12 @@ const About = () => {
           {/* Founder Details */}
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <div className="flex items-center space-x-6 mb-6">
-              <img
+              <Image
                 src={founders[activeFounder].image}
                 alt={founders[activeFounder].name}
-                className="w-20 h-20 rounded-2xl object-cover"
+                width={80}
+                height={80}
+                className="rounded-2xl object-cover"
               />
               <div>
                 <h3 className="text-3xl font-bold text-gray-800">{founders[activeFounder].name}</h3>
@@ -232,7 +237,9 @@ const About = () => {
             </div>
 
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border-l-4 border-purple-500">
-              <p className="text-gray-700 italic text-lg">"{founders[activeFounder].quote}"</p>
+              <p className="text-gray-700 italic text-lg">
+                &ldquo;{founders[activeFounder].quote}&rdquo;
+              </p>
             </div>
           </div>
         </div>
@@ -242,7 +249,7 @@ const About = () => {
           <h3 className="text-3xl font-bold mb-6">Our Mission</h3>
           <p className="text-xl text-purple-100 leading-relaxed max-w-4xl mx-auto">
             To create exceptional hospitality experiences that connect property owners with
-            travelers, while empowering local communities and driving innovation in Malaysia's
+            travelers, while empowering local communities and driving innovation in Malaysia&apos;s
             property sector.
           </p>
         </div>
@@ -322,7 +329,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Join the NN Retreats Journey</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Whether you're a property owner ready to list with us, or a traveler looking for a
+            Whether you are a property owner ready to list with us, or a traveler looking for a
             welcoming stay, we invite you to be part of our story.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

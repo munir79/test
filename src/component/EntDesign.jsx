@@ -1,7 +1,7 @@
 // pages/service-details/interior-design.js
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 
 const EntDesign = () => {
   const [activeCategory, setActiveCategory] = useState('residential');
@@ -80,26 +80,6 @@ const EntDesign = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-100">
-      {/* Navigation */}
-      {/* <nav className="bg-white/80 backdrop-blur-lg border-b border-orange-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-800">PrimeProperties</span>
-            </Link>
-            <Link
-              href="/#services"
-              className="text-orange-600 hover:text-orange-700 font-semibold transition-colors duration-300"
-            >
-              ← Back to Services
-            </Link>
-          </div>
-        </div>
-      </nav> */}
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20">
@@ -109,11 +89,11 @@ const EntDesign = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">🎨</span>
                 </div>
-                <span className="text-gray-700 font-semibold">Interior Design & Makeovers</span>
+                <span className="text-gray-700 font-semibold">Interior Design &amp; Makeovers</span>
               </div>
 
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                Transform
+                Transform{' '}
                 <span className="block bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
                   Your Space
                 </span>
@@ -135,21 +115,26 @@ const EntDesign = () => {
               </div>
             </div>
 
+            {/* Hero Images */}
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80"
                       alt="Modern Design"
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover rounded-xl mb-4"
                     />
                     <h3 className="font-semibold text-gray-800">Modern Living</h3>
                   </div>
                   <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-2 hover:rotate-0 transition-transform duration-500 delay-100">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=400&q=80"
                       alt="Office Design"
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover rounded-xl mb-4"
                     />
                     <h3 className="font-semibold text-gray-800">Office Spaces</h3>
@@ -157,17 +142,21 @@ const EntDesign = () => {
                 </div>
                 <div className="space-y-4 mt-8">
                   <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500 delay-200">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80"
                       alt="Luxury Design"
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover rounded-xl mb-4"
                     />
                     <h3 className="font-semibold text-gray-800">Luxury Interiors</h3>
                   </div>
                   <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-2 hover:rotate-0 transition-transform duration-500 delay-300">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80"
                       alt="Retail Design"
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover rounded-xl mb-4"
                     />
                     <h3 className="font-semibold text-gray-800">Retail Design</h3>
@@ -232,9 +221,11 @@ const EntDesign = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group"
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={400}
+                  height={256}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -253,7 +244,7 @@ const EntDesign = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Let's create a space that reflects your style and meets your needs perfectly.
+            Let&apos;s create a space that reflects your style and meets your needs perfectly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">

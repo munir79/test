@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['cdn-icons-png.flaticon.com'], // এখানে আমাদের ইমেজ সার্ভার লিখতে হবে
+    // domains: ['cdn-icons-png.flaticon.com'],
+    domains: ['images.unsplash.com'],
+  },
+  turbopack: {
+    root: './', // বর্তমান project folder কে root হিসেবে সেট করা
   },
 };
 

@@ -25,7 +25,7 @@ const PropertyConsultancy = () => {
     {
       icon: '🚀',
       title: 'Revenue Optimization',
-      description: "Maximize your property's earning potential across all platforms",
+      description: "Maximize your property&apos;s earning potential across all platforms",
       features: [
         'Multi-platform listing',
         'Dynamic pricing',
@@ -64,29 +64,28 @@ const PropertyConsultancy = () => {
     },
   ];
 
+  const methodologyPoints = [
+    'Real-time market data analysis',
+    'AI-powered predictive modeling',
+    'Competitive benchmarking',
+    'Customized strategy development',
+    'Continuous performance monitoring',
+  ];
+
+  const whyChooseUs = [
+    { stat: '15+', label: 'Years Industry Experience' },
+    { stat: '500+', label: 'Properties Optimized' },
+    { stat: '98%', label: 'Client Satisfaction Rate' },
+    { stat: '45%', label: 'Average Revenue Increase' },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100">
-      {/* Navigation */}
-      {/* <nav className="bg-white/80 backdrop-blur-lg border-b border-green-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-800">PrimeProperties</span>
-            </Link>
-            <Link href="/#services" className="text-green-600 hover:text-green-700 font-semibold transition-colors duration-300">
-              ← Back to Services
-            </Link>
-          </div>
-        </div>
-      </nav> */}
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Hero Text */}
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 border border-green-200">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center">
@@ -96,9 +95,9 @@ const PropertyConsultancy = () => {
               </div>
 
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                Unlock Your
+                Unlock Your{' '}
                 <span className="block bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent">
-                  Property's Potential
+                  Property&apos;s Potential
                 </span>
               </h1>
 
@@ -118,6 +117,7 @@ const PropertyConsultancy = () => {
               </div>
             </div>
 
+            {/* Hero Case Studies */}
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                 <div className="space-y-6">
@@ -167,8 +167,8 @@ const PropertyConsultancy = () => {
                   <h3 className="text-2xl font-bold text-gray-800 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3 text-gray-700">
+                    {service.features.map((feature, fIndex) => (
+                      <li key={fIndex} className="flex items-center space-x-3 text-gray-700">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         <span>{feature}</span>
                       </li>
@@ -192,14 +192,8 @@ const PropertyConsultancy = () => {
                 insights that drive real results for your property investments.
               </p>
               <div className="space-y-4">
-                {[
-                  'Real-time market data analysis',
-                  'AI-powered predictive modeling',
-                  'Competitive benchmarking',
-                  'Customized strategy development',
-                  'Continuous performance monitoring',
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-4">
+                {methodologyPoints.map((item, i) => (
+                  <div key={i} className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-sm">✓</span>
                     </div>
@@ -211,14 +205,9 @@ const PropertyConsultancy = () => {
             <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-6">Why Choose Our Consultancy?</h3>
               <div className="space-y-4">
-                {[
-                  { stat: '15+', label: 'Years Industry Experience' },
-                  { stat: '500+', label: 'Properties Optimized' },
-                  { stat: '98%', label: 'Client Satisfaction Rate' },
-                  { stat: '45%', label: 'Average Revenue Increase' },
-                ].map((item, index) => (
+                {whyChooseUs.map((item, i) => (
                   <div
-                    key={index}
+                    key={i}
                     className="flex items-center justify-between py-3 border-b border-green-400/30 last:border-b-0"
                   >
                     <span className="text-green-100">{item.label}</span>
