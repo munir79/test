@@ -503,7 +503,6 @@ const Homepage = () => {
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <div className="flex flex-col items-center space-y-2">
-            <span className="text-gray-500 text-sm uppercase tracking-wider">Scroll</span>
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
               <motion.div
                 className="w-1 h-3 bg-white/60 rounded-full mt-2"
