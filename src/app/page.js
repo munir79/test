@@ -5,6 +5,7 @@ import AboutPage from '@/component/aboutPage/AboutPage';
 import ProjectsHighLight from '@/component/projects/ProjectsHighLight';
 import Contact from '@/component/Contact';
 import FAQSection from '@/component/FAQSection';
+import ContactSupport from '@/component/ContactSupport ';
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
           <FAQSection />
         </div>
         <div>
-          <Contact />
+          {/* <Contact /> */}
+          <ContactSupport />
         </div>
       </PublicLayout>
     </div>
