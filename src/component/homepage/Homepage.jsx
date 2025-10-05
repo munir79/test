@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 // Animation variants
+// this ios added
+// dfv
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
@@ -117,20 +119,6 @@ const Homepage = () => {
     { number: '24/7', label: 'Support Available' },
     { number: '15+', label: 'Years Experience' },
   ];
-
-  // const searchParams = useSearchParams();
-
-  // useEffect(() => {
-  //   const scrollTarget = searchParams.get('scroll');
-  //   if (scrollTarget) {
-  //     const section = document.getElementById(scrollTarget);
-  //     if (section) {
-  //       setTimeout(() => {
-  //         section.scrollIntoView({ behavior: 'smooth' });
-  //       }, 500);
-  //     }
-  //   }
-  // }, [searchParams]);
 
   return (
     <div className="w-full bg-white">
